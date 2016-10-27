@@ -84,7 +84,7 @@ return [
      */
     'Router'=>[
         'Application_Folder'=> GRACE . '../App/',
-        'Controller_Folder' => GRACE . '../App/controllers/',      //存放控制器文件的文件夹路径名称
+        'Controller_Folder' => GRACE . '../App/Controller/',      //存放控制器文件的文件夹路径名称
         'Model_Folder'      => GRACE . '../App/models/',           //存放模型文件的文件夹路径名称,支持数组
         'View_Folder'       => GRACE . '../App/views/',            //存放视图文件的文件夹路径名称,支持数组
         'library_Folder'    => GRACE . '../App/library/',          //存放类库文件的文件夹路径名称,存放在该文件夹的类库中的类会自动加载,支持数组
@@ -116,11 +116,23 @@ return [
             'View'      => 'View.php',
 
             /**
+             * Memcache配置
+             */
+            'Mmc'=>[
+                'MEM_ENABLE'  => true,   //不启用
+                'MEM_SERVER'  =>
+                    [
+                        ['127.0.0.1', 11211],
+                    ],
+                'MEM_GROUP'   => 'channelgst',
+            ],
+
+            /**
              * LOG 相关配置
              */
             'Log'       => [
                 //日志文件 文件地址
-                'path'=> GRACE.'../Cache/Log/dt.log'
+                'path'=> GRACE.'../App/Cache/Log/dt.log'
             ],
 
             /**
@@ -136,7 +148,7 @@ return [
                 'pconnect'      => 0,                   //1  长连接模式 0  短连接
                 'quiet'         => 0,                   //安静模式 生产环境的
                 'slowquery'     => 1,                   //对慢查询记录
-                'rootpath'      => GRACE.'../Cache/',   //慢查询记录文件
+                'rootpath'      => GRACE.'../App/Cache/',   //慢查询记录文件
             ],
 
             /**
@@ -158,11 +170,12 @@ return [
                  * File cache
                  */
                 'cacheType' => 'File',
-                'cacheDir'  =>  GRACE.'../Cache/tmp',
+                'cacheDir'  =>  GRACE.'../App/Cache/tmp',
                 'adapter'   => \Desarrolla2\Cache\Adapter\File::class,
 
                 /**
                  * memcache
+                 * 需要安装memcache
                  */
 //                'cacheType' => 'Memcache',
 //                'adapter'   => \Desarrolla2\Cache\Adapter\Memcache::class,
@@ -181,13 +194,13 @@ return [
         'Providers'=>[
             'Parsedown' => Grace\Parsedown\Parsedown::class,
             'Req'       => Grace\Req\Req::class,
-            'Xls'       => Grace\Xls\Xls::class,
             'Db'        => Grace\Db\Db::class,
             'Cookies'   => Grace\Cookies\Cookies::class,
-            'Mmc'       => Grace\Mmc\Mmc::class,
             'Cache'     => Grace\Cache\Cache::class,
-            'Smarty'    => Grace\Smarty\Smarty::class,
-            'View'      => Grace\View\View::class,
+            'Mmc'       => Grace\Mmc\Mmc::class,
+//            'Xls'       => Grace\Xls\Xls::class,
+//            'Smarty'    => Grace\Smarty\Smarty::class,
+//            'View'      => Grace\View\View::class,
             'Log'       => Grace\Log\Log::class,
         ],
 

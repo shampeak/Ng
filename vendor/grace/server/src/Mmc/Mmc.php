@@ -21,15 +21,13 @@ class Mmc {
             $this->_config = $memConfig;
             if(!$this->_config['MEM_ENABLE']) return null;
             // | ------------------------------------------------------
-            $this->mmc = new \Memcache;
-
+            $this->mmc = new \Memcache();
             if(empty($memConfig)) {
                   $memConfig['MEM_SERVER'] = [
                       ['127.0.0.1', 11211]
                   ];
-                  $memConfig['MEM_GROUP'] = 'tag';
+                  $memConfig['MEM_GROUP'] = 'default';
             }
-
             //实现addServer功能
             foreach($memConfig['MEM_SERVER'] as $config) {
                   /*
@@ -51,6 +49,7 @@ class Mmc {
             if(!$this->_config['MEM_ENABLE']) return null;
             // | ------------------------------------------------------
             return $this->mmc->getVersion();
+
       }
 
       //读取缓存

@@ -11,4 +11,6 @@ return array(
     'Grace\\' => array($vendorDir . '/grace/server/src',$baseDir . '/Grace'),
     'Desarrolla2\\Test\\Cache\\' => array($vendorDir . '/desarrolla2/cache/test'),
     'Desarrolla2\\Cache\\' => array($vendorDir . '/desarrolla2/cache/src'),
+    'App\\' => array($baseDir . '/App/'),
+    '' => array($baseDir . '/App/Library/'),
 );

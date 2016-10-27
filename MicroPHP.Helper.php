@@ -18,7 +18,7 @@ foreach (array('set_cookie'=>'setCookie', 'set_cookie_raw'=>'setCookieRaw') as $
 					 return MpLoader::' . $true . '($key, $value, $life, $path, $domian, $http_only);
 		 }');
 	}
-}
+}c
 foreach (array('server', 'session') as $func) {
 	if (!function_exists($func)) {
 		eval('function ' . $func . '($key = null, $default = null) {

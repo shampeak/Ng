@@ -18,7 +18,11 @@
 
 
 
-
+function Model($Modelname = '',$params = [])
+{
+    $class = '\\App\\Model\\'.ucfirst(strtolower($Modelname));
+    return new $class($params);
+}
 
 
 

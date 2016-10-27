@@ -61,9 +61,9 @@ Array
             'Ext'           => '',
             'REQUEST_METHOD'=>$_SERVER['REQUEST_METHOD'],
             'Profix'        => 'do',
-            'ControllerBase'=> Config('Router')['Application_Folder'],
-            'ControllerFile'=> Config('Router')['Application_Folder'].$c.'/'.$c.'.php',
-            'ControllerFile_'=> Config('Router')['Application_Folder'].$c.'/'.$a.'.php',
+            'ControllerBase'=> Config('Router')['Controller_Folder'],
+            'ControllerFile'=> Config('Router')['Controller_Folder'].$c.'/'.$c.'.php',
+//            'ControllerFile_'=> Config('Router')['Controller_Folder'].$c.'/'.$a.'.php',
             'Action'        => ($_SERVER['REQUEST_METHOD'] == 'GET')?'do'.$a:'do'.$a.ucfirst(strtolower($_SERVER['REQUEST_METHOD'])),
             //'Params'    => '',                                    //path路由的时候用得上
         ];
@@ -106,9 +106,9 @@ Array
             'Ext'           => '',
             'REQUEST_METHOD'=> 'DEFINED',
             'Profix'        => 'do',
-            'ControllerBase'=> Config('Router')['Application_Folder'],
-            'ControllerFile'=> Config('Router')['Application_Folder'].$c.'/'.$c.'.php',
-            'ControllerFile_'=> Config('Router')['Application_Folder'].$c.'/'.$a.'.php',
+            'ControllerBase'=> Config('Router')['Controller_Folder'],
+            'ControllerFile'=> Config('Router')['Controller_Folder'].$c.'/'.$c.'.php',
+//            'ControllerFile_'=> Config('Router')['Controller_Folder'].$c.'/'.$a.'.php',
             'Action'        => 'do'.$a,
             'Params'        => $_params,                                    //path路由的时候用得上
         ];
