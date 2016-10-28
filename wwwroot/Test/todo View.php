@@ -12,9 +12,11 @@ include("../../vendor/autoload.php");
 include(GRACE."Bootstrap.php");
 
 /**
- * 自动加载
+ * 视图
  */
 
 
 $class = new \Test();
 $class->run2();
+
+

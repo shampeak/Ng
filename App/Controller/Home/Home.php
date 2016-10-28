@@ -9,7 +9,7 @@ class Home extends BaseController{
     }
 
     public function doIndex(){
-        echo 123;
+       
     }
 
     public function doRes($params = []){

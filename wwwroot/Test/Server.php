@@ -11,8 +11,6 @@ define('GRACE', '../../Grace/');
 include("../../vendor/autoload.php");
 include(GRACE."Bootstrap.php");
 
-
-
 /**
  * server容器调试
  */
@@ -36,8 +34,8 @@ include(GRACE."Bootstrap.php");
 //server('Cookies')->set("123","test",10);
 //$res = server('Cookies')->get("123");
 //D($res);
+//
 
-//Cache
 //server('Cache')->set("vvv2","test",10);
 //$res = server('Cache')->get("vvv2");
 //D($res);

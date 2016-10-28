@@ -31,3 +31,4 @@ getint('uid',0,12,true);
 getstr('uid',0,12,true);
 
 
+

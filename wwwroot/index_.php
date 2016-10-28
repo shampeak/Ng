@@ -31,11 +31,6 @@
  */
 
 
-define('IN_WONIU_APP', TRUE);
-define('WDS', DIRECTORY_SEPARATOR);
-
-
-
 //获取完整的url
 echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 echo '<br>';
